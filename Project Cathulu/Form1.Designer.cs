@@ -30,13 +30,13 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.CPU_Title = new System.Windows.Forms.Label();
+            this.RAM_Title = new System.Windows.Forms.Label();
+            this.Start_Program = new System.Windows.Forms.Button();
             this.RAM_Usage = new System.Windows.Forms.Label();
             this.CPU_Usage = new System.Windows.Forms.Label();
             this.CPU_Timer = new System.Windows.Forms.Timer(this.components);
             this.RAM_Timer = new System.Windows.Forms.Timer(this.components);
-            this.Start_Program = new System.Windows.Forms.Button();
-            this.RAM_Title = new System.Windows.Forms.Label();
-            this.CPU_Title = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,11 +52,42 @@
             this.panel1.Size = new System.Drawing.Size(520, 397);
             this.panel1.TabIndex = 0;
             // 
+            // CPU_Title
+            // 
+            this.CPU_Title.AutoSize = true;
+            this.CPU_Title.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CPU_Title.Location = new System.Drawing.Point(3, 307);
+            this.CPU_Title.Name = "CPU_Title";
+            this.CPU_Title.Size = new System.Drawing.Size(96, 45);
+            this.CPU_Title.TabIndex = 5;
+            this.CPU_Title.Text = "CPU";
+            // 
+            // RAM_Title
+            // 
+            this.RAM_Title.AutoSize = true;
+            this.RAM_Title.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RAM_Title.Location = new System.Drawing.Point(7, 352);
+            this.RAM_Title.Name = "RAM_Title";
+            this.RAM_Title.Size = new System.Drawing.Size(92, 45);
+            this.RAM_Title.TabIndex = 4;
+            this.RAM_Title.Text = "Ram";
+            // 
+            // Start_Program
+            // 
+            this.Start_Program.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Start_Program.Location = new System.Drawing.Point(118, 133);
+            this.Start_Program.Name = "Start_Program";
+            this.Start_Program.Size = new System.Drawing.Size(141, 48);
+            this.Start_Program.TabIndex = 2;
+            this.Start_Program.Text = "Spotify";
+            this.Start_Program.UseVisualStyleBackColor = true;
+            this.Start_Program.Click += new System.EventHandler(this.Start_Program_Click);
+            // 
             // RAM_Usage
             // 
             this.RAM_Usage.AutoSize = true;
             this.RAM_Usage.Font = new System.Drawing.Font("Garamond", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RAM_Usage.Location = new System.Drawing.Point(105, 372);
+            this.RAM_Usage.Location = new System.Drawing.Point(105, 367);
             this.RAM_Usage.Name = "RAM_Usage";
             this.RAM_Usage.Size = new System.Drawing.Size(59, 25);
             this.RAM_Usage.TabIndex = 1;
@@ -66,7 +97,7 @@
             // 
             this.CPU_Usage.AutoSize = true;
             this.CPU_Usage.Font = new System.Drawing.Font("Garamond", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPU_Usage.Location = new System.Drawing.Point(105, 327);
+            this.CPU_Usage.Location = new System.Drawing.Point(105, 322);
             this.CPU_Usage.Name = "CPU_Usage";
             this.CPU_Usage.Size = new System.Drawing.Size(54, 25);
             this.CPU_Usage.TabIndex = 0;
@@ -83,37 +114,6 @@
             this.RAM_Timer.Enabled = true;
             this.RAM_Timer.Interval = 800;
             this.RAM_Timer.Tick += new System.EventHandler(this.RAM_Timer_Tick);
-            // 
-            // Start_Program
-            // 
-            this.Start_Program.Font = new System.Drawing.Font("Garamond", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Start_Program.Location = new System.Drawing.Point(118, 133);
-            this.Start_Program.Name = "Start_Program";
-            this.Start_Program.Size = new System.Drawing.Size(141, 48);
-            this.Start_Program.TabIndex = 2;
-            this.Start_Program.Text = "Spotify";
-            this.Start_Program.UseVisualStyleBackColor = true;
-            this.Start_Program.Click += new System.EventHandler(this.Start_Program_Click);
-            // 
-            // RAM_Title
-            // 
-            this.RAM_Title.AutoSize = true;
-            this.RAM_Title.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RAM_Title.Location = new System.Drawing.Point(7, 352);
-            this.RAM_Title.Name = "RAM_Title";
-            this.RAM_Title.Size = new System.Drawing.Size(92, 45);
-            this.RAM_Title.TabIndex = 4;
-            this.RAM_Title.Text = "Ram";
-            // 
-            // CPU_Title
-            // 
-            this.CPU_Title.AutoSize = true;
-            this.CPU_Title.Font = new System.Drawing.Font("Garamond", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CPU_Title.Location = new System.Drawing.Point(3, 307);
-            this.CPU_Title.Name = "CPU_Title";
-            this.CPU_Title.Size = new System.Drawing.Size(96, 45);
-            this.CPU_Title.TabIndex = 5;
-            this.CPU_Title.Text = "CPU";
             // 
             // Form1
             // 

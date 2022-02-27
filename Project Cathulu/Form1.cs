@@ -30,13 +30,13 @@ namespace Project_Cathulu
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
         }
 
         /// <summary>
         /// All of these methods are getter and setter methods, they will get information, then dispay what they have gathered
         /// </summary>
-        
+
 
         // CPU
         protected string GetCurrentCpuUsage()
