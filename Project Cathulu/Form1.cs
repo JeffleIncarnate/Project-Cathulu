@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Windows.Forms;
+using SpotifyAPI.Web;
 using System.IO;
 using System.Media;
 using System.Collections.Generic;
@@ -33,7 +34,7 @@ namespace Project_Cathulu
         }
 
         /// <summary>
-        /// All of these methods are getter methods, they will get information, then dispay what they have gathered
+        /// All of these methods are getter and setter methods, they will get information, then dispay what they have gathered
         /// </summary>
         
 
@@ -58,6 +59,13 @@ namespace Project_Cathulu
         protected void RAM_Timer_Tick(object sender, EventArgs e)
         {
             RAM_Usage.Text = GetCurrentRamUSage();
+        }
+
+        private void Start_Program_Click(object sender, EventArgs e)
+        {
+            string spotify = @"C:\Users\Test\AppData\Roaming\Spotify\Spotify.exe";
+
+            Process.Start(spotify);
         }
     }
 }
