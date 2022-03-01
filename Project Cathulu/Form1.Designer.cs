@@ -38,7 +38,6 @@
             this.CPU_Usage = new System.Windows.Forms.Label();
             this.CPU_Timer = new System.Windows.Forms.Timer(this.components);
             this.RAM_Timer = new System.Windows.Forms.Timer(this.components);
-            this.SoundCheckerRequest = new System.Windows.Forms.Timer(this.components);
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -129,17 +128,13 @@
             this.RAM_Timer.Interval = 800;
             this.RAM_Timer.Tick += new System.EventHandler(this.RAM_Timer_Tick);
             // 
-            // SoundCheckerRequest
-            // 
-            this.SoundCheckerRequest.Enabled = true;
-            this.SoundCheckerRequest.Tick += new System.EventHandler(this.SoundCheckerRequest_Tick);
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(99, 27);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(122, 26);
             this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
@@ -167,7 +162,6 @@
         private System.Windows.Forms.Label CPU_Title;
         private System.Windows.Forms.Label RAM_Title;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Timer SoundCheckerRequest;
         private System.Windows.Forms.TextBox textBox1;
     }
 }

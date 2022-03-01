@@ -84,9 +84,13 @@ namespace Project_Cathulu
             }
         }
 
-        private void SoundCheckerRequest_Tick(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            
+            string typesURL = "";
+
+            typesURL = textBox1.Text;
+
+            label1.Text = typesURL;
         }
     }
 }
