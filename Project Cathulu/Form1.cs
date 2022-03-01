@@ -92,5 +92,12 @@ namespace Project_Cathulu
 
             label1.Text = typesURL;
         }
+
+        protected string UrlSend(String sString)
+        {
+            string result = "";
+
+            return result;
+        }
     }
 }
