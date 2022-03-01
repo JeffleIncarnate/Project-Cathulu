@@ -67,7 +67,25 @@ namespace Project_Cathulu
             RAM_Usage.Text = GetCurrentRamUSage();
         }
 
-        private void Start_Program_Click(object sender, EventArgs e)
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            string typesURL = "";
+            typesURL = textBox1.Text;
+            label1.Text = typesURL;
+
+            UrlSend(typesURL);
+        }
+
+        protected static void UrlSend(string sString)
+        {
+            string result;
+
+            result = sString;
+
+            Start_Program_Click(result);
+        }
+
+        private static void Start_Program_Click(object sender, EventArgs e, string bString)
         {
             var url = "http://media.ch9.ms/ch9/2876/fd36ef30-cfd2-4558-8412-3cf7a0852876/AzureWebJobs103.mp3";
             using (var mf = new MediaFoundationReader(url))
@@ -75,29 +93,9 @@ namespace Project_Cathulu
             {
                 wo.Init(mf);
                 wo.Play();
-                do
-                {
-                    RAM_Usage.Text = "Hahahah Bad";
-                }
                 while (wo.PlaybackState == PlaybackState.Playing);
                     Console.WriteLine("1");
             }
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            string typesURL = "";
-
-            typesURL = textBox1.Text;
-
-            label1.Text = typesURL;
-        }
-
-        protected string UrlSend(String sString)
-        {
-            string result = "";
-
-            return result;
         }
     }
 }
