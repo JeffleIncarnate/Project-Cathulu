@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.CPU_Title = new System.Windows.Forms.Label();
             this.RAM_Title = new System.Windows.Forms.Label();
             this.Start_Program = new System.Windows.Forms.Button();
@@ -37,13 +38,14 @@
             this.CPU_Usage = new System.Windows.Forms.Label();
             this.CPU_Timer = new System.Windows.Forms.Timer(this.components);
             this.RAM_Timer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             this.SoundCheckerRequest = new System.Windows.Forms.Timer(this.components);
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.textBox1);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.CPU_Title);
             this.panel1.Controls.Add(this.RAM_Title);
@@ -54,6 +56,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 397);
             this.panel1.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(320, 161);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
             // 
             // CPU_Title
             // 
@@ -118,19 +129,17 @@
             this.RAM_Timer.Interval = 800;
             this.RAM_Timer.Tick += new System.EventHandler(this.RAM_Timer_Tick);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(320, 161);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "label1";
-            // 
             // SoundCheckerRequest
             // 
             this.SoundCheckerRequest.Enabled = true;
             this.SoundCheckerRequest.Tick += new System.EventHandler(this.SoundCheckerRequest_Tick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(99, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(122, 26);
+            this.textBox1.TabIndex = 7;
             // 
             // Form1
             // 
@@ -159,6 +168,7 @@
         private System.Windows.Forms.Label RAM_Title;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Timer SoundCheckerRequest;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

@@ -12,6 +12,7 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Management;
+using NAudio.Wave;
 
 namespace Project_Cathulu
 {
@@ -68,25 +69,24 @@ namespace Project_Cathulu
 
         private void Start_Program_Click(object sender, EventArgs e)
         {
-            string spotify = @"C:\Users\Test\AppData\Roaming\Spotify\Spotify.exe";
-
-            Process.Start(spotify);
+            var url = "http://media.ch9.ms/ch9/2876/fd36ef30-cfd2-4558-8412-3cf7a0852876/AzureWebJobs103.mp3";
+            using (var mf = new MediaFoundationReader(url))
+            using (var wo = new WaveOutEvent())
+            {
+                wo.Init(mf);
+                wo.Play();
+                do
+                {
+                    RAM_Usage.Text = "Hahahah Bad";
+                }
+                while (wo.PlaybackState == PlaybackState.Playing);
+                    Console.WriteLine("1");
+            }
         }
 
         private void SoundCheckerRequest_Tick(object sender, EventArgs e)
         {
-            ManagementObjectSearcher objSearcher = new ManagementObjectSearcher("SELECT * FROM Win32_SoundDevice");
-
-            ManagementObjectCollection objCollection = objSearcher.Get();
-
-            foreach (ManagementObject obj in objCollection)
-            {
-                foreach (PropertyData property in obj.Properties)
-                {
-                    Console.Out.WriteLine(String.Format("{0}:{1}", property.Name, property.Value));
-                    label1.Text = String.Format("{0}:{1}", property.Name, property.Qualifiers);
-                }
-            }
+            
         }
     }
 }
