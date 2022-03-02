@@ -13,6 +13,7 @@ using System.Drawing;
 using System.Text;
 using System.Management;
 using NAudio.Wave;
+using Newtonsoft.Json;
 
 namespace Project_Cathulu
 {
@@ -94,6 +95,30 @@ namespace Project_Cathulu
                 wo.Play();
                 while (wo.PlaybackState == PlaybackState.Playing);
                     Console.WriteLine("1");
+            }
+        }
+
+        // CLASSES
+        public class Student
+        {
+            public string name
+            {
+                get;
+                set;
+            }
+        }
+
+        public class Universities
+        {
+            public string university
+            {
+                get;
+                set;
+            }
+            public IList<Student> students
+            {
+                get;
+                set;
             }
         }
     }
