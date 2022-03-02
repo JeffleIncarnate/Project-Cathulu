@@ -121,5 +121,14 @@ namespace Project_Cathulu
                 set;
             }
         }
+
+        public class ClassUniversities
+        {
+            public Universities universities
+            {
+                get; 
+                set;
+            }
+        }
     }
 }
