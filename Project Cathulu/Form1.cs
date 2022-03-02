@@ -82,7 +82,6 @@ namespace Project_Cathulu
 
             result = sString;
 
-            Start_Program_Click(result);
         }
 
         private static void Start_Program_Click(object sender, EventArgs e, string bString)

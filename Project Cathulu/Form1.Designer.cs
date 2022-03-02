@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.CPU_Title = new System.Windows.Forms.Label();
             this.RAM_Title = new System.Windows.Forms.Label();
@@ -38,7 +39,6 @@
             this.CPU_Usage = new System.Windows.Forms.Label();
             this.CPU_Timer = new System.Windows.Forms.Timer(this.components);
             this.RAM_Timer = new System.Windows.Forms.Timer(this.components);
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +55,14 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(520, 397);
             this.panel1.TabIndex = 0;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(99, 27);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(122, 26);
+            this.textBox1.TabIndex = 7;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label1
             // 
@@ -92,9 +100,8 @@
             this.Start_Program.Name = "Start_Program";
             this.Start_Program.Size = new System.Drawing.Size(141, 48);
             this.Start_Program.TabIndex = 2;
-            this.Start_Program.Text = "Spotify";
+            this.Start_Program.Text = "Start";
             this.Start_Program.UseVisualStyleBackColor = true;
-            this.Start_Program.Click += new System.EventHandler(this.Start_Program_Click);
             // 
             // RAM_Usage
             // 
@@ -127,14 +134,6 @@
             this.RAM_Timer.Enabled = true;
             this.RAM_Timer.Interval = 800;
             this.RAM_Timer.Tick += new System.EventHandler(this.RAM_Timer_Tick);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(99, 27);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(122, 26);
-            this.textBox1.TabIndex = 7;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // Form1
             // 
