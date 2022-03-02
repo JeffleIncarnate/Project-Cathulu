@@ -30,6 +30,8 @@ namespace Project_Cathulu
             _cpuCounter = new PerformanceCounter("Processor", "% Processor Time", "_Total");
             _ramCounter = new PerformanceCounter("Memory", "Available MBytes");
 
+
+
             InitializeComponent();
         }
 
@@ -130,5 +132,6 @@ namespace Project_Cathulu
                 set;
             }
         }
+
     }
 }
