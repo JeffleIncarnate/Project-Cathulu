@@ -35,7 +35,7 @@ namespace Project_Cathulu
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public static void Form1_Load(object sender, EventArgs e)
         {
             
         }
@@ -99,39 +99,5 @@ namespace Project_Cathulu
                     Console.WriteLine("1");
             }
         }
-
-        // CLASSES
-        public class Student
-        {
-            public string name
-            {
-                get;
-                set;
-            }
-        }
-
-        public class Universities
-        {
-            public string university
-            {
-                get;
-                set;
-            }
-            public IList<Student> students
-            {
-                get;
-                set;
-            }
-        }
-
-        public class ClassUniversities
-        {
-            public Universities universities
-            {
-                get; 
-                set;
-            }
-        }
-
     }
 }
